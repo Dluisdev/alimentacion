@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: alimentacion-bot
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: DATABASE_URL
+        value: ./database/alimentacion.db
+    disk:
+      name: alimentacion-db
+      mountPath: /opt/render/project/src/database
+      sizeGB: 1
