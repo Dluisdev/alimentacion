@@ -7,7 +7,7 @@ export interface User {
   preferences: string[]; // comidas que le gustan
   allergies: string[]; // alergias
   dislikes: string[]; // comidas que no le gustan
-  mood?: 'bien' => 'bien' | 'regular' | 'mal'; // estado de ánimo para monitorear depresión
+  mood?: 'bien' | 'regular' | 'mal'; // estado de ánimo para monitorear depresión
   createdAt: Date;
   updatedAt: Date;
 }
